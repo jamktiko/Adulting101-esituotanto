@@ -1,6 +1,15 @@
+# Salaisuudet
 .env
-node_modules
+.env.local
+
+# Riippuvuudet (estää molemmat kansiot)
+node_modules/
+**/node_modules/
+
+# Macin/Windowsin turhat tiedostot
 .DS_Store
-.DS_Store
-.env
-node_modules
+Thumbs.db
+
+# Angularin koosteet
+/dist/
+/.angular/
