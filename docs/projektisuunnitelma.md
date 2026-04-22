@@ -47,12 +47,34 @@ _Tavoite on, että lopputulos vastaa visiotamme, kaikki tiimin jäsenet ovat kan
 
 _Kirjaa tähän lukuun aikataulu. Millä tavoin projekti viedään läpi. Voitte itse päättää mikä taso on teidän projektillenne paras._
 
-| Tapahtuma        | Päivämäärä | Muut tiedot/osanottajat                  |
-| ---------------- | ---------- | ---------------------------------------- |
-| Projekti alkaa   | 20.04.2026 | Ohjelmistoprojekti 2 alkaa               |
-| Idean valinta    | 24.04.2025 | Valitaan tuotantoon menevä projekti-idea |
-| ............     | pvm        | Kaikki muut tapahtumat listattuna        |
-| Projekti päättyy | 20.05.2026 | Ohjelmistoprojekti 2 päättyy             |
+| Tapahtuma      | Päivämäärä | Muut tiedot/osanottajat                      |
+| -------------- | ---------- | -------------------------------------------- |
+| Projekti alkaa | 20.04.2026 | Ohjelmistoprojekti 2 alkaa                   |
+| Työstöä        | 21.04.2026 | Backend toimii, aiheen opiskelu, suunnittelu |
+| Työstö+testaus | 22.04.2026 | Frontend-suunnittelu, arkkitehtuuri          |
+| Työstö         | 23.04.2026 | ............................................ |
+| Työstö+testaus | 24.04.2026 | ............................................ |
+
+| Tuotanto | 27.04.2026 | ............................................ |
+| Tuotanto | 28.04.2026 | ............................................ |
+| Tuotanto | 29.04.2026 | ............................................ |
+| Tuotanto | 30.04.2026 | ............................................ |
+
+| Tuotanto | 04.05.2026 | ............................................ |
+| Tuotanto | 05.05.2026 | ............................................ |
+| Tuotanto | 06.05.2026 | ............................................ |
+| Tuotanto | 07.05.2026 | ............................................ |
+| Tuotanto | 08.05.2026 | ............................................ |
+
+| Viimeistely | 11.05.2026 | ............................................ |
+| Viimeistely | 12.05.2026 | ............................................ |
+| Viimeistely | 13.05.2026 | ............................................ |
+| Helatorstai | 14.05.2026 | Vapaapäivä! |
+| Viimeistely | 15.05.2026 | ............................................ |
+
+| Viimeistely | 18.05.2026 | ............................................ |
+| Viimeistely | 19.05.2026 | ............................................ |
+| Projekti päättyy | 20.05.2026 | Ohjelmistoprojekti 2 päättyy |
 
 ## Raportointi, kommunikointi ja dokumentointi
 
