@@ -1,0 +1,49 @@
+name: Deploy Frontend
+
+# Tämä putki käynnistyy vain, jos koodia pusketaan main-haaraan
+# ja muutokset koskevat frontend-kansiota.
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'frontend/**'
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    # Asetetaan oletuskansioksi frontend, koska kyseessä on monorepo
+    defaults:
+      run:
+        working-directory: ./frontend/testi-frontend
+
+    steps:
+      - name: Checkout koodi
+        uses: actions/checkout@v3
+
+      - name: Asenna Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18 # Voit vaihtaa tämän vastaamaan paikallista versiotasi
+
+      - name: Asenna riippuvuudet
+        run: npm install
+
+      - name: Build Angular (Vite)
+        run: npm run build
+
+      - name: Määritä AWS Credentials
+        uses: aws-actions/configure-aws-credentials@v2
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: eu-north-1 # Muuta tarvittaessa oikeaksi (esim. us-east-1)
+
+      - name: Siirrä tiedostot S3-ämpäriin
+        # TÄRKEÄÄ: Varmista että ./dist kansio vastaa Viten todellista ulostuloa!
+        run: aws s3 sync ./dist/testi-frontend s3://${{ secrets.AWS_S3_BUCKET }} --delete
+
+      - name: Tyhjennä CloudFront välimuisti
+        # Tämä varmistaa, että käyttäjät näkevät heti uusimman version
+        run: aws cloudfront create-invalidation --distribution-id ${{ secrets.CF_DIST_ID }} --paths "/*"
