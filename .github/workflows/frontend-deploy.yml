@@ -23,9 +23,9 @@ jobs:
         uses: actions/checkout@v3
 
       - name: Asenna Node.js
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v4
         with:
-          node-version: 18 # Voit vaihtaa tämän vastaamaan paikallista versiotasi
+          node-version: 20 # Voit vaihtaa tämän vastaamaan paikallista versiotasi
 
       - name: Asenna riippuvuudet
         run: npm install
