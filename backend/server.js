@@ -1,3 +1,8 @@
+const path = require('path');
+require('dotenv').config({ path: path.resolve(__dirname, '.env') });
+
+console.log("TARKISTUS: MONGODB_URI on:", process.env.MONGODB_URI ? "Löytyi!" : "TYHJÄ (undefined)");
+
 const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors'); // Hyvä lisätä tässä vaiheessa Angularia varten
