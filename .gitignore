@@ -1,6 +1,7 @@
 # Salaisuudet
 .env
 .env.local
+**/.env
 
 # Riippuvuudet (estää molemmat kansiot)
 node_modules/
